@@ -2,115 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRNBK WORLD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CRNBK WORLD — mobile phones, earphones, chargers and mobile accessories. Contact us for product details and business enquiries.">
+<title>CRNBK WORLD | Mobile Phones & Accessories</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-  color: #222;
-}
-header {
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 25px 10px;
-}
-header h1 {
-  margin: 0;
-  font-size: 30px;
-}
-nav {
-  background: #087f5b;
-  padding: 14px;
-  text-align: center;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 10px;
-  font-weight: bold;
-}
-.hero {
-  text-align: center;
-  padding: 45px 15px;
-  background: white;
-}
-.hero h2 {
-  color: #087f5b;
-}
-.products {
-  padding: 20px;
-  text-align: center;
-}
-.card {
-  background: white;
-  margin: 15px auto;
-  padding: 25px;
-  border-radius: 12px;
-  max-width: 350px;
-  box-shadow: 0 2px 8px #ddd;
-}
-button {
-  background: #087f5b;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-}
-footer {
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+:root{--navy:#06182b;--blue:#0878ef;--green:#0aaa4b;--light:#f3f8ff;--ink:#13243a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}
+a{text-decoration:none;color:inherit}.top{background:var(--navy);color:#fff;text-align:center;padding:8px 14px;font-size:13px}
+header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px max(5%,calc((100% - 1160px)/2));background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #001a3312}
+.logo{font-weight:900;font-size:clamp(22px,3vw,31px);letter-spacing:-1px;color:#101820}.logo span{color:var(--blue)}.tag{font-size:12px;color:#526174}
+nav{display:flex;gap:20px;font-weight:700;font-size:14px}nav a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:12px 18px;border-radius:30px;font-weight:800;color:#fff;background:var(--green);box-shadow:0 5px 15px #00a84824}.btn:hover{filter:brightness(.94)}
+.hero{background:radial-gradient(ellipse at 78% 45%,#0b4b8d 0%,#071d35 43%,#020b15 100%);color:white;padding:68px 5%;min-height:370px;display:flex;align-items:center}
+.hero-inner{max-width:1160px;width:100%;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:35px}
+.eyebrow{color:#72c8ff;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(38px,6vw,66px);line-height:1.04;margin:10px 0 15px;letter-spacing:-2px}h1 span{color:#22a0ff}
+.hero p{font-size:18px;color:#e1ebf6;max-width:590px}.hero-art{font-size:clamp(75px,12vw,145px);text-align:center;filter:drop-shadow(0 12px 24px #1689ff55)}.hero-art small{display:block;font-size:16px;letter-spacing:2px;color:#a9d8ff;font-weight:700}
+.section{padding:55px 5%;max-width:1260px;margin:auto}.section-title{text-align:center;margin:0 0 8px;font-size:34px;color:var(--navy)}.subtitle{text-align:center;color:#637185;margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{border-radius:18px;padding:26px 18px;background:var(--light);text-align:center;border:1px solid #e5edf8;transition:transform .2s}.card:hover{transform:translateY(-4px)}.icon{font-size:48px}.card h3{margin:10px 0 4px}.card p{font-size:14px;color:#657185;min-height:42px}.card .btn{font-size:13px;padding:10px 16px;background:#086fea}
+.band{background:var(--navy);color:white;padding:36px 5%}.benefits{max-width:1160px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.benefits strong{display:block;font-size:17px}.benefits span{font-size:14px;color:#c6d8eb}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box{background:#eaf4ff;border-radius:20px;padding:28px}.about-box .icon{font-size:55px}
+.contact{background:#f3f8ff;text-align:center;padding:55px 5%}.contact h2{font-size:32px;margin:0 0 8px}.contact p{color:#5c6c80}
+footer{background:#020d19;color:#fff;padding:28px 5%;text-align:center}footer .logo{color:white}footer p{color:#b8c7d8;font-size:13px}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:10;background:#0aaa4b;color:#fff;border-radius:40px;padding:13px 18px;font-weight:800;box-shadow:0 8px 25px #001a3344}
+@media(max-width:800px){header{flex-wrap:wrap;justify-content:center;text-align:center}nav{order:3;width:100%;justify-content:center;gap:14px;flex-wrap:wrap}.header-btn{display:none}.hero-inner{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}.hero-art{font-size:85px}.grid{grid-template-columns:repeat(2,1fr)}.benefits{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:460px){.grid{grid-template-columns:1fr}.hero{padding-top:45px;padding-bottom:45px}.section-title{font-size:28px}.wa-float{right:10px;bottom:10px;padding:11px 14px;font-size:13px}}
 </style>
 </head>
 <body>
-
+<div class="top">📦 Mobile Phones & Accessories · Wholesale Enquiries Welcome · India</div>
 <header>
-  <h1>CRNBK WORLD</h1>
-  <p>Mobile Phones, Earphones, Chargers & Accessories</p>
+  <a href="#home" aria-label="CRNBK WORLD home"><div class="logo">CRNBK <span>WORLD</span><div class="tag">Mobile Phones | Accessories | Trading</div></div></a>
+  <nav><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+  <a class="btn header-btn" href="https://wa.me/917825995911?text=Hello%20CRNBK%20WORLD%2C%20I%20want%20to%20enquire%20about%20your%20products." target="_blank" rel="noopener">WhatsApp Us</a>
 </header>
-
-<nav>
-  <a href="#home">Home</a>
-  <a href="#products">Products</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero" id="home">
-  <h2>Welcome to CRNBK WORLD</h2>
-  <p>Your trusted destination for mobile accessories.</p>
-</section>
-
-<section class="products" id="products">
-  <h2>Our Products</h2>
-
-  <div class="card">
-    <h3>Mobile Phones</h3>
-    <p>Explore our mobile phone collection.</p>
-    <button>View Products</button>
-  </div>
-
-  <div class="card">
-    <h3>Earphones</h3>
-    <p>Discover earphones for everyday use.</p>
-    <button>View Products</button>
-  </div>
-
-  <div class="card">
-    <h3>Chargers & Accessories</h3>
-    <p>Find chargers and mobile accessories.</p>
-    <button>View Products</button>
-  </div>
-</section>
-
-<footer id="contact">
-  <h3>Contact CRNBK WORLD</h3>
-  <p>Thank you for visiting our store.</p>
-</footer>
-
-</body>
-</html>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+ <div><div class="eyebrow">Welcome to</div><h1>CRNBK <span>WORLD</span></h1>
+ <p>Your destination for mobile phones, earphones, chargers, cables and everyday mobile accessories. Contact us for product details, prices and wholesale enquiries.</p>
+ <a class="btn" href="https://wa.me/917825995911?text=Hello%20CRNBK%20WORLD%2C%20please%20share%20your%20product%20catalogue." target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+ </div><div class="hero-art" aria-label="Mobile phone and accessories illustration">📱 🎧 🔌<small>STAY CONNECTED</small></div>
+</div></section>
+<section class="section" id="products"><h2 class="section-title">Our Products</h2><p class="subtitle">Explore our product categories and ask us about availability.</p>
+<div class="grid">
+ <article class="card"><div class="icon">📱</div><h3>Mobile Phones</h3><p>Smartphones and mobile phone enquiries.</p><a class="btn" href="https://wa.me/917825995911?text=Hello%2C%20I%20am%20interested%20in%20mobile%20phones." target="_blank" rel="noopener">Enquire Now</a></article>
+ <article class="card"><div class="icon">🎧</div><h3>Earphones</h3><p>Earphones, headphones and wireless audio.</p><a class="btn" href="https://wa.me/917825995911?text=Hello%2C%20I%20am%20interested%20in%20earphones." target="_blank" rel="noopener">Enquire Now</a></article>
+ <article class="card"><div class="icon">🔌</div><h3>Chargers & Cables</h3><p>Charging adapters, USB cables and accessories.</p><a class="btn" href="https://wa.me/917825995911?text=Hello%2C%20I%20am%20interested%20in%20chargers%20and%20cables." target="_blank" rel="noopener">Enquire Now</a></article>
+ <article class="card"><div class="icon">🛍️</div><h3>Mobile Accessories</h3><p>Useful accessories for phones and devices.</p><a class="btn" href="https://wa.me/917825995911?text=Hello%2C%20please%20share%20your%20mobile%20accessories%20range." target="_blank" rel="noopener">Enquire Now</a></article>
+</div></section>
+<section class="band"><div class="benefits"><div>✅<strong>Product Enquiries</strong><span>Ask about current availability</span></div><div>💬<strong>Direct Contact</strong><span>Chat with us on WhatsApp</span></div><div>📦<strong>Bulk Enquiries</strong><span>Retailer and wholesale requests</span></div><div>🤝<strong>Business Support</strong><span>Discuss your requirements</span></div></div></section>
+<section class="section" id="about"><div class="about"><div><div class="eyebrow">Who we are</div><h2 class="section-title" style="text-align:left">About CRNBK WORLD</h2><p>CRNBK WORLD is focused on mobile phones and accessories, including earphones, chargers and cables. We welcome product enquiries from individual customers, retailers and business buyers.</p><p>Contact us directly to discuss products, current pricing, availability and bulk requirements.</p><a class="btn" href="https://wa.me/917825995911?text=Hello%20CRNBK%20WORLD%2C%20I%20have%20a%20business%20enquiry." target="_blank" rel="noopener">Business Enquiry</a></div><div class="about-box"><div class="icon">🌐 📱 📦</div><h3>Let’s do business</h3><p>Have a product request or wholesale enquiry? Send us a message on WhatsApp and tell us what you need.</p></div></div></section>
+<section class="contact" id="contact"><h2>Contact CRNBK WORLD</h2><p>For product prices, availability, bulk orders or business enquiries, message us directly.</p><a class="btn" href="https://wa.me/917825995911?text=Hello%20CRNBK%20WORLD%2C%20I%20want%20to%20make%20an%20enquiry." target="_blank" rel="noopener">🟢 WhatsApp: 7825995911</a></section>
+</main>
+<footer><div class="logo">CRNBK <span>WORLD</span></div><p>Mobile Phones · Earphones · Chargers · Accessories</p><p>© <span id="year"></span> CRNBK WORLD. All rights reserved.</p><p>Please confirm product availability and pricing directly with us.</p></footer>
+<a class="wa-float" href="https://wa.me/917825995911?text=Hello%20CRNBK%20WORLD" target="_blank" rel="noopener">☏ WhatsApp</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
